@@ -1,5 +1,12 @@
 {
   "type": "capacitor",
-  "web": { "framework": "react", "bundler": "vite" },
-  "integrations": { "capacitor": { "webDir": "dist" } }
+  "web": {
+    "framework": "react",
+    "bundler": "vite"
+  },
+  "integrations": {
+    "capacitor": {
+      "webDir": "dist"
+    }
+  }
 }
