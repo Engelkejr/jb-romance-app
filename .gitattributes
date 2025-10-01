@@ -1,6 +1,6 @@
-{
-  "appId": "com.jb.app",
-  "appName": "JB Love",
-  "webDir": "dist",
-  "bundledWebRuntime": false
-}
+* text=auto
+*.json text eol=lf
+*.js   text eol=lf
+*.ts   text eol=lf
+*.css  text eol=lf
+*.md   text eol=lf
