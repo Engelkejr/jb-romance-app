@@ -1,5 +1,6 @@
 {
   "appId": "com.jb.app",
   "appName": "JB Love",
+  "bundledWebRuntime": false,
   "webDir": "dist"
 }

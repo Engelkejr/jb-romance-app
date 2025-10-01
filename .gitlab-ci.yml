@@ -1,0 +1,36 @@
+stages:
+  - build
+  - android
+
+# 1) Build web com Node 20
+build_web:
+  image: node:20
+  stage: build
+  script:
+    - npm ci
+    - npm run build            # gera dist/
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 week
+
+# 2) Build APK (debug) com Android SDK + Java 17
+android_debug_apk:
+  image: ghcr.io/reactnativecommunity/docker-android:latest
+  stage: android
+  needs: ["build_web"]
+  before_script:
+    # garante que o webDir do Capacitor foi copiado p/ o nativo
+    - npm ci
+    - npx cap copy android
+  script:
+    - cd android
+    # cria local.properties apontando para o SDK dentro do container
+    - echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+    # compila APK debug
+    - ./gradlew assembleDebug
+  artifacts:
+    when: always
+    paths:
+      - android/app/build/outputs/apk/debug/*.apk
+    expire_in: 1 week
