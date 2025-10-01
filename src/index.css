@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{ --bg:255 255 255; --fg:15 23 42; }
+.bg-background{ background: rgb(var(--bg)); }
+.text-foreground{ color: rgb(var(--fg)); }
+.text-balance{ text-wrap: balance; }
