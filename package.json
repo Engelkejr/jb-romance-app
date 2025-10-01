@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "node ./node_modules/vite/bin/vite.js build",
-    "preview": "vite preview",
-    "android:sync": "npx cap copy android"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@capacitor/core": "^7.4.3",

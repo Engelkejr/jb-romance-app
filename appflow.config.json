@@ -5,12 +5,6 @@
     "bundler": "vite"
   },
   "integrations": {
-    "capacitor": {
-      "appId": "com.jb.app",
-      "appName": "JB Love",
-      "webDir": "dist",
-      "android": { "variables": {} },
-      "ios": { "variables": {} }
-    }
+    "capacitor": {}
   }
 }
