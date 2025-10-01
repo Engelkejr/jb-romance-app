@@ -6,7 +6,11 @@
   },
   "integrations": {
     "capacitor": {
-      "webDir": "dist"
+      "appId": "com.jb.app",
+      "appName": "JB Love",
+      "webDir": "dist",
+      "android": { "variables": {} },
+      "ios": { "variables": {} }
     }
   }
 }
